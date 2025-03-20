@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    color: #E0E0E0; /* Soft off-white */
+    background-color: #121212; /* Dark grayish-black */
+    text-align: center;
+}
+
+/* Background Video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Glassmorphic Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px) saturate(150%);
+    background: rgba(25, 25, 25, 0.8);
+    border-radius: 0 0 15px 15px;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav a {
+    color: #E0E0E0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #BDBDBD;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 120px;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #E0E0E0;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.15);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #BDBDBD;
+    margin-bottom: 20px;
+}
+
+/* Glassmorphic Buttons */
+button {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #E0E0E0;
+    backdrop-filter: blur(12px) saturate(180%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px; /* Add margin to space out the buttons */
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.15);
+}
+
+/* Today's Specials Section */
+.specials {
+    padding: 50px 20px;
+    margin-top: 50px;
+    text-align: center; /* Center the heading */
+}
+
+.specials h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #E0E0E0;
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Today's Specials Grid */
+.specials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 20px; /* Space between cards */
+    max-width: 1000px; /* Limit the width of the grid */
+    margin: 0 auto; /* Center the grid */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+.special-card {
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.special-card:hover {
+    transform: scale(1.05);
+}
+
+.special-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.special-text {
+    padding: 15px;
+}
+
+.special-text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #E0E0E0;
+    margin-bottom: 10px;
+}
+
+.special-text p {
+    font-size: 16px;
+    color: #BDBDBD;
+}
+
+/* Order Now Button */
+.order-button {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #E0E0E0;
+    backdrop-filter: blur(12px) saturate(180%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px; /* Space above the button */
+    display: block; /* Make it a block element */
+    margin-left: auto; /* Center the button */
+    margin-right: auto; /* Center the button */
+}
+
+.order-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.15);
+}
+
+
+/* Registration Section */
+.registration {
+    padding: 120px 20px 50px; /* Added padding-top to account for the fixed navbar */
+    text-align: center;
+}
+
+.registration h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #E0E0E0;
+    margin-bottom: 30px;
+}
+
+.registration-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.registration-card {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.registration-card:hover {
+    transform: scale(1.05);
+}
+
+.registration-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E0E0E0;
+    margin-bottom: 10px;
+}
+
+.registration-card p {
+    font-size: 16px;
+    color: #BDBDBD;
+    margin-bottom: 20px;
+}
+
+.registration-card button {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #E0E0E0;
+    backdrop-filter: blur(12px) saturate(180%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.registration-card button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.15);
+}
+
+/* Glassmorphic Footer */
+footer {
+    backdrop-filter: blur(20px) saturate(150%);
+    background: rgba(25, 25, 25, 0.8);
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    margin-top: 50px;
+    color: #E0E0E0;
+    text-align: center;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Registration Form */
+/* Registration Form Styles */
+.registration-form {
+    backdrop-filter: blur(20px) saturate(150%); /* Adjust blur and saturation */
+    background: rgba(25, 25, 25, 0.8); /* Darker semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+.registration-form.hidden {
+    display: none;
+}
+
+.registration-form h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E0E0E0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #E0E0E0;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: #E0E0E0;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+    border-color: rgba(255, 255, 255, 0.5); /* Highlight border on focus */
+}
+
+.registration-form button[type="submit"] {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    color: #E0E0E0;
+    backdrop-filter: blur(12px) saturate(180%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1); /* Soft shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    margin-top: 20px;
+}
+
+.registration-form button[type="submit"]:hover {
+    background: rgba(255, 255, 255, 0.25); /* Brighter on hover */
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.15); /* Stronger shadow on hover */
+}
+
+.registration-form p {
+    font-size: 16px;
+    color: #BDBDBD;
+    margin-top: 15px;
+}
+
+.registration-form a {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registration-form a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #E0E0E0;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #E0E0E0;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.registration-form button[type="submit"] {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #E0E0E0;
+    backdrop-filter: blur(12px) saturate(180%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+}
+
+.registration-form button[type="submit"]:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.15);
+}
+
+
+/* Login Form Styles */
+#login-form {
+    backdrop-filter: blur(20px) saturate(150%); /* Adjust blur and saturation */
+    background: rgba(25, 25, 25, 0.8); /* Darker semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+#login-form.hidden {
+    display: none;
+}
+
+#login-form h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E0E0E0;
+    margin-bottom: 20px;
+}
+
+#login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#login-form .form-group label {
+    font-size: 16px;
+    color: #E0E0E0;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#login-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: #E0E0E0;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form .form-group input:focus {
+    border-color: rgba(255, 255, 255, 0.5); /* Highlight border on focus */
+}
+
+#login-form .forgot-password {
+    color: #E0E0E0;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#login-form .forgot-password:hover {
+    color: #BDBDBD; /* Slightly lighter on hover */
+    text-decoration: underline;
+}
+
+#login-form button[type="submit"] {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    color: #E0E0E0;
+    backdrop-filter: blur(12px) saturate(180%);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1); /* Soft shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    margin-top: 20px;
+}
+
+#login-form button[type="submit"]:hover {
+    background: rgba(255, 255, 255, 0.25); /* Brighter on hover */
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0px 6px 14px rgba(255, 255, 255, 0.15); /* Stronger shadow on hover */
+}
+
+
+/* Add fallback for backdrop-filter */
+header, .special-card, .registration-card, footer {
+    background: rgba(25, 25, 25, 0.8); /* Fallback for older browsers */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    /* Navigation Bar */
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+
+    /* Forms */
+    .registration-form {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .registration-form h3 {
+        font-size: 20px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .registration-form button[type="submit"] {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Forgot Password Link */
+    .forgot-password {
+        font-size: 12px;
+    }
+}
+
+@supports (backdrop-filter: blur(20px)) {
+    header, .special-card, .registration-card, footer {
+        backdrop-filter: blur(20px) saturate(150%);
+        background: rgba(25, 25, 25, 0.5); /* Semi-transparent background */
+    }
+}

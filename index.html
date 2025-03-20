@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooknet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay loop muted id="bg-video">
+            <source src="cooking2.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h1 class="logo">Cooknet</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#menu">Specials</a>
+            <a href="register.html">Register and Sign In</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Cooknet</h1>
+        <p>Freshly prepared. From your Local Neighbours.</p>
+        <button onclick="scrollToMenu()">See Today's Specials</button>
+        <button onclick="window.location.href='register.html'">Are you a homecook? Register Now</button>
+    </section>
+
+    <!-- Today's Specials -->
+    <section id="menu" class="specials">
+        <h2>Today's Specials</h2>
+        <div class="specials-grid">
+            <!-- Special 1: Biriyani -->
+            <div class="special-card">
+                <img src="biriyani.jpg" alt="Biriyani">
+                <div class="special-text">
+                    <h3>Biriyani</h3>
+                    <p>Homemade Biriyani. Comes with its own twist.</p>
+                </div>
+            </div>
+
+            <!-- Special 2: Pasta -->
+            <div class="special-card">
+                <img src="idli.jpg" alt="Idli">
+                <div class="special-text">
+                    <h3>Idli</h3>
+                    <p>Fluffy Idli with your favourite chutney.</p>
+                </div>
+            </div>
+
+            <!-- Special 3: Burger -->
+            <div class="special-card">
+                <img src="burger.jpg" alt="Burger">
+                <div class="special-text">
+                    <h3>Burger</h3>
+                    <p>A homemade burger. Tasty.</p>
+                </div>
+            </div>
+
+            <!-- Special 4: Dessert -->
+            <div class="special-card">
+                <img src="dessert.jpg" alt="Dessert">
+                <div class="special-text">
+                    <h3>Cake</h3>
+                    <p>Cake from a local bake.</p>
+                </div>
+            </div>
+        </div>
+        <button class="order-button">Want it? Order Now</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cooknet. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
